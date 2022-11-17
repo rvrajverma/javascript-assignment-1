@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+</head>
+
+<body>
+
+    <h1>Simple Calculator</h1>
+    <div>
+        <span>Enter the Number1</span>: <input type="number" id="num1">
+        <br>
+        <span>Enter the Number2</span>: <input type="number" id="num2">
+        <br>
+        <span>Result :</span><span id="result"></span>
+        <br>
+
+        <button onclick="calculate('plus')">+</button>
+        <button onclick="calculate('minus')">-</button>
+        <button onclick="calculate('multiply')">*</button>
+        <button onclick="calculate('divide')">/</button>
+    </div>
+    <script src="type/javascript">
+
+       function calculate(operation) {
+    // debugger
+    let result;
+    const number1 = document.getElementById("num1").value;
+    const number2 = document.getElementById("num2").value;
+    switch (operation) {
+        case "plus":
+            result = Number(number1) + Number(number2);
+            document.getElementById("result").innerHTML= result;
+            break;
+        case "minus":
+            result = number1 - number2;
+            document.getElementById("result").innerHTML= result;
+            break;
+            case "multiply":
+            result = number1 * number2;
+            document.getElementById("result").innerHTML= result;
+            break;
+            case "divide":
+            result = number1 / number2;
+            document.getElementById("result").innerHTML= result;
+            break;
+       
+    }
+}
+</script>
+</body>
+
+</html>
